@@ -1,15 +1,10 @@
 package com.example.foodapp.activity;
 
+import android.os.Bundle;
+import android.view.View;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-
-import com.example.foodapp.R;
 import com.example.foodapp.adapter.FoodListAdapter;
 import com.example.foodapp.databinding.ActivityListFoodBinding;
 import com.example.foodapp.domain.Foods;
@@ -18,10 +13,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Stream;
 
 public class FoodListActivity extends BaseActivity {
     ActivityListFoodBinding binding;
