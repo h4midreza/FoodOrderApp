@@ -6,4 +6,7 @@
     <color name="blue_grey">#2e4058</color>
     <color name="yellow">#ffe485</color>
     <color name="grey">#f5f5f5</color>
+    <color name="grey_bg">#ABABAB</color>
+    <color name="gold">#ffc106</color>
+    <color name="light_grey_bg">#b2b5b5</color>
 </resources>

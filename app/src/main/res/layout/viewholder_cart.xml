@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="110dp"
-    app:cardCornerRadius="15dp"
-    app:cardElevation="3dp"
-    android:layout_marginVertical="8dp"
-    android:layout_marginHorizontal="4dp">
+    android:layout_height="@dimen/cart_item_height"
+    app:cardCornerRadius="@dimen/radius_15"
+    app:cardElevation="@dimen/card_view_elevation"
+    android:layout_marginVertical="@dimen/margin_small"
+    android:layout_marginHorizontal="@dimen/margin_xSmall">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
 
         <ImageView
             android:id="@+id/pic"
-            android:layout_width="123dp"
-            android:layout_height="96dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="@dimen/cart_image_width"
+            android:layout_height="@dimen/cart_image_height"
+            android:layout_marginStart="@dimen/margin_small"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -26,9 +26,9 @@
             android:id="@+id/titleTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="title"
-            android:textSize="16sp"
+            android:layout_marginStart="@dimen/margin_standard"
+            android:text="@string/title"
+            android:textSize="@dimen/font_size_16"
             android:textColor="@color/blue_grey"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/pic"
@@ -38,9 +38,9 @@
             android:id="@+id/totalEachItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="$0"
-            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/dollar"
+            android:textSize="@dimen/font_size_16"
             android:textColor="@color/blue_grey"
             app:layout_constraintStart_toStartOf="@+id/titleTxt"
             app:layout_constraintTop_toBottomOf="@+id/titleTxt" />
@@ -49,16 +49,16 @@
             android:id="@+id/feeEachItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="$0"
-            android:textSize="18sp"
+            android:layout_marginEnd="@dimen/margin_standard"
+            android:text="@string/dollar"
+            android:textSize="@dimen/font_size_18"
             android:textColor="@color/red"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/pic"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="96dp"
+            android:layout_width="@dimen/add_or_remove_layout_width"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/pic"
             app:layout_constraintEnd_toStartOf="@+id/feeEachItem"
@@ -66,11 +66,11 @@
 
             <TextView
                 android:id="@+id/minusCartBtn"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="@dimen/add_or_remove_button_size"
+                android:layout_height="@dimen/add_or_remove_button_size"
                 android:background="@drawable/edittext_bg"
                 android:gravity="center"
-                android:text="-"
+                android:text="@string/minus"
                 android:textColor="@color/red"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -79,11 +79,11 @@
 
             <TextView
                 android:id="@+id/plusCartBtn"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="@dimen/add_or_remove_button_size"
+                android:layout_height="@dimen/add_or_remove_button_size"
                 android:background="@drawable/edittext_bg"
                 android:gravity="center"
-                android:text="+"
+                android:text="@string/plus"
                 android:textColor="@color/red"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -92,12 +92,12 @@
 
             <TextView
                 android:id="@+id/numberItem"
-                android:layout_width="24dp"
+                android:layout_width="@dimen/add_or_remove_text_width"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="0"
+                tools:text="0"
                 android:textColor="@color/blue_grey"
-                android:textSize="16sp"
+                android:textSize="@dimen/font_size_16"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/plusCartBtn"
